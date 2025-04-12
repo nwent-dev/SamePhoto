@@ -11,7 +11,7 @@ import SwiftUI
 struct SamePhotoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhotoLibraryView()
         }
     }
 }

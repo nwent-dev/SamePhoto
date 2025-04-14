@@ -3,7 +3,7 @@ import SwiftUI
 
 struct PhotoLibraryView: View {
     // MARK: - переменные
-    
+    let height = UIScreen.main.bounds.height
     @StateObject private var viewModel = PhotoLibraryViewModel()
     @State private var showSuccessView = false
     @State private var deletedCount = 0
@@ -82,6 +82,7 @@ struct PhotoLibraryView: View {
             }
             .padding(.top)
         }
+        .padding(.bottom, !viewModel.selectedAssets.isEmpty ? height * 0.12 : 0)
         .background {
             RoundedRectangle(cornerRadius: 30)
                 .fill(Color.white)
